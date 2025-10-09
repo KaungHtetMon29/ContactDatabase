@@ -1,11 +1,11 @@
-package com.example.contactdatabase.viewModel
+package com.kaunghtetmon.contactdatabase.viewModel
 
 import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
-import com.example.contactdatabase.data.Contact
-import com.example.contactdatabase.data.DatabaseHelper
+import com.kaunghtetmon.contactdatabase.data.Contact
+import com.kaunghtetmon.contactdatabase.data.DatabaseHelper
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch

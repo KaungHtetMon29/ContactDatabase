@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.contactdatabase"
+    namespace = "com.kaunghtetmon.contactdatabase"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.contactdatabase"
+        applicationId = "com.kaunghtetmon.contactdatabase"
         minSdk = 26
         targetSdk = 34
         versionCode = 1

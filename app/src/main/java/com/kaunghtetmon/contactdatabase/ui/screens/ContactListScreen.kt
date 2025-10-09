@@ -1,4 +1,4 @@
-package com.example.contactdatabase.ui.screens
+package com.kaunghtetmon.contactdatabase.ui.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
@@ -30,9 +30,9 @@ import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.example.contactdatabase.data.Contact
-import com.example.contactdatabase.utils.ImageUtils
-import com.example.contactdatabase.viewModel.ContactViewModel
+import com.kaunghtetmon.contactdatabase.data.Contact
+import com.kaunghtetmon.contactdatabase.utils.ImageUtils
+import com.kaunghtetmon.contactdatabase.viewModel.ContactViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

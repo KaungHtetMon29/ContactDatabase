@@ -1,4 +1,4 @@
-package com.example.contactdatabase
+package com.kaunghtetmon.contactdatabase
 
 import org.junit.Test
 

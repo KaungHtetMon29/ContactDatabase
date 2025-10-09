@@ -1,4 +1,4 @@
-package com.example.contactdatabase.data
+package com.kaunghtetmon.contactdatabase.data
 
 import android.content.ContentValues
 import android.content.Context

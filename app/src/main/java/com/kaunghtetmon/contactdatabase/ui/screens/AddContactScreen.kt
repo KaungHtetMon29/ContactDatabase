@@ -1,4 +1,4 @@
-package com.example.contactdatabase.ui.screens
+package com.kaunghtetmon.contactdatabase.ui.screens
 
 import android.app.DatePickerDialog
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -34,9 +34,9 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.example.contactdatabase.data.Contact
-import com.example.contactdatabase.utils.ImageUtils
-import com.example.contactdatabase.viewModel.ContactViewModel
+import com.kaunghtetmon.contactdatabase.data.Contact
+import com.kaunghtetmon.contactdatabase.utils.ImageUtils
+import com.kaunghtetmon.contactdatabase.viewModel.ContactViewModel
 import java.text.SimpleDateFormat
 import java.util.*
 

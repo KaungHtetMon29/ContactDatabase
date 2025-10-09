@@ -1,4 +1,4 @@
-package com.example.contactdatabase.data
+package com.kaunghtetmon.contactdatabase.data
 
 data class Contact(
     val id: Int = 0,

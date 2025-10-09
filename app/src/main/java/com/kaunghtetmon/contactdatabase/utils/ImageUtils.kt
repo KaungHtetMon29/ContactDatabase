@@ -1,4 +1,4 @@
-package com.example.contactdatabase.utils
+package com.kaunghtetmon.contactdatabase.utils
 
 import android.content.Context
 import android.graphics.Bitmap
