@@ -78,4 +78,34 @@ class DatabaseHelper(context: Context) :
         db.close()
         return exists
     }
+
+    fun isEmailExistsExcludingContact(email: String, contactId: Int): Boolean {
+        val db = this.readableDatabase
+        val query = "SELECT * FROM $TABLE_CONTACTS WHERE $KEY_EMAIL = ? AND $KEY_ID != ?"
+        val cursor = db.rawQuery(query, arrayOf(email, contactId.toString()))
+        val exists = cursor.count > 0
+        cursor.close()
+        db.close()
+        return exists
+    }
+
+    fun updateContact(contact: Contact): Boolean {
+        val db = this.writableDatabase
+        val contentValues = ContentValues()
+        contentValues.put(KEY_NAME, contact.name)
+        contentValues.put(KEY_DOB, contact.dob)
+        contentValues.put(KEY_EMAIL, contact.email)
+        contentValues.put(KEY_PROFILE_IMAGE, contact.profileImage)
+
+        val result = db.update(TABLE_CONTACTS, contentValues, "$KEY_ID = ?", arrayOf(contact.id.toString()))
+        db.close()
+        return result > 0
+    }
+
+    fun deleteContact(contactId: Int): Boolean {
+        val db = this.writableDatabase
+        val result = db.delete(TABLE_CONTACTS, "$KEY_ID = ?", arrayOf(contactId.toString()))
+        db.close()
+        return result > 0
+    }
 }

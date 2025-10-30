@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Profile Image -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/contactImageCard"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            app:cardCornerRadius="32dp"
+            app:cardElevation="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray">
+
+                <ImageView
+                    android:id="@+id/contactImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Contact Image" />
+
+                <ImageView
+                    android:id="@+id/defaultContactIcon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:src="@android:drawable/ic_menu_gallery"
+                    app:tint="@android:color/white"
+                    android:contentDescription="Default Profile" />
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Delete Button -->
+        <ImageButton
+            android:id="@+id/deleteContactButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Delete Contact"
+            android:padding="8dp"
+            android:src="@android:drawable/ic_menu_delete"
+            app:tint="#D32F2F"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <!-- Contact Information -->
+        <TextView
+            android:id="@+id/contactNameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toStartOf="@id/deleteContactButton"
+            app:layout_constraintStart_toEndOf="@id/contactImageCard"
+            app:layout_constraintTop_toTopOf="@id/contactImageCard" />
+
+        <TextView
+            android:id="@+id/contactDobTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintEnd_toStartOf="@id/deleteContactButton"
+            app:layout_constraintStart_toStartOf="@id/contactNameTextView"
+            app:layout_constraintTop_toBottomOf="@id/contactNameTextView" />
+
+        <TextView
+            android:id="@+id/contactEmailTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintEnd_toStartOf="@id/deleteContactButton"
+            app:layout_constraintStart_toStartOf="@id/contactNameTextView"
+            app:layout_constraintTop_toBottomOf="@id/contactDobTextView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
+
